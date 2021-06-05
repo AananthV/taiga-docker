@@ -110,9 +110,9 @@ services:
   taiga-events:
     image: taigaio/taiga-events:latest
     environment:
-      RABBITMQ_USER: taiga
-      RABBITMQ_PASS: taiga
-      TAIGA_SECRET_KEY: "taiga-back-secret-key"
+      RABBITMQ_USER: "${RABBITMQ_USER}"
+      RABBITMQ_PASS: "${RABBITMQ_PASS}"
+      TAIGA_SECRET_KEY: "${TAIGA_SECRET_KEY}"
     networks:
       - taiga
     depends_on:
